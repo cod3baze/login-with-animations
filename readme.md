@@ -1,7 +1,7 @@
 # Animações
 
-- animações
-  animções vão de um ponto ate o outro
+- Animações
+  vão de um ponto ate o outro
 
 - [x] Fazer o formulário aparecer, suavemente, quando a página abrir.
 
