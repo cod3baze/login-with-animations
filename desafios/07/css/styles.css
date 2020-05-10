@@ -154,3 +154,36 @@ form.validate-error {
     transform: translateX(15%);
   }
 }
+
+/* SQUARES */
+body {
+  overflow: hidden;
+}
+
+.squares li {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, .15);
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  animation: up 2s infinite alternate;
+  /* animation-direction: reverse; */
+  /*[reverte o (from) pata (to)]*/
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-800px) rotate(960deg);
+  }
+}
