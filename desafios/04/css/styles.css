@@ -70,18 +70,63 @@ form .btn-login {
 /* APARIÇÃO DO FORM */
 
 form {
-  animation-name: fade;
-  animation-duration: 500ms;
+  overflow: hidden;
+  animation: fade 0.2s;
+}
+
+form .input-block:nth-child(1) {
+  animation-name: move 500ms;
+  animation-delay: 50ms;
+}
+
+form .input-block:nth-child(2) {
+  animation: move 400ms;
+  animation-delay: 100ms;
+  animation-fill-mode: backwards;
+}
+
+form .btn-login {
+  animation: move 400ms 250ms;
+  animation-fill-mode: backwards;
+  cursor: pointer;
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: translateX(-35%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 @keyframes fade {
   from {
     opacity: 0;
-    transform: scale(.9)
+    transform: scale(0.9);
   }
 
   to {
     opacity: 1;
-    transform: scale(1)
+    transform: scale(1);
+  }
+}
+
+/* Sumir com o forma: click() */
+
+.form-hide {
+  animation: down 500ms forwards;
+}
+
+@keyframes down {
+  form {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100vh);
   }
 }

@@ -69,10 +69,9 @@ form .btn-login {
 
 /* APARIÇÃO DO FORM */
 
-
 form {
   overflow: hidden;
-  animation: fade .2s;
+  animation: fade 0.2s;
 }
 
 form .input-block:nth-child(1) {
@@ -95,31 +94,32 @@ form .btn-login {
 @keyframes move {
   from {
     opacity: 0;
-    transform: translateX(-35%)
+    transform: translateX(-35%);
   }
 
   to {
     opacity: 1;
-    transform: translateX(0%)
+    transform: translateX(0%);
   }
 }
 
 @keyframes fade {
   from {
     opacity: 0;
-    transform: scale(.9)
+    transform: scale(0.9);
   }
 
   to {
     opacity: 1;
-    transform: scale(1)
+    transform: scale(1);
   }
 }
 
 /* Sumir com o forma: click() */
 
 .form-hide {
-  animation: down 500ms forwards;
+  animation: down 1.2s forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 @keyframes down {
